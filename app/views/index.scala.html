@@ -1,0 +1,14 @@
+@main {
+
+    <h1 id="clock"></h1>
+
+    <script type="text/javascript" charset="utf-8">
+        // Called for each Comet message
+        var clockChanged = function(time) {
+            $('#clock').html(time.replace(/(\d)/g, '<span>$1</span>'))
+        }
+    </script>
+
+    <iframe id="comet" src="@routes.Application.liveClock.unique"></iframe>
+
+}
