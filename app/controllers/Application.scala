@@ -19,7 +19,7 @@ object Application extends Controller {
     import java.util._
     import java.text._
 
-    val dateFormat = new SimpleDateFormat("HH : mm : ss zz")
+    val dateFormat = new SimpleDateFormat("HH : mm : ss zzzz")
 
     Enumerator.fromCallback1 { TRUE =>
       Promise.timeout(Some(dateFormat.format(new Date)), 100 milliseconds)
